@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="../js/index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="fixed w-full z-5000 top-0 left-0 text-[18px]">
+        <div class="container flex mx-auto justify-between items-center py-4">
+            <div class="ml-14">
+                Christian G.
+            </div>
+            <ul class="flex justify-between w-60 mr-14">
+                <li>
+                    <a href="/" class="hover:text-gray-300">About</a>
+                </li>
+                <li>
+                    <a href="#projects" class="hover:text-gray-300">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact" class="hover:text-gray-300">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center">
+            <span class="text-[10px] leading-none ml-6">■</span>
+            <hr class="flex-grow border-t border-black mx-6">
+            <span class="text-[10px] leading-none mr-6">■</span>
+        </div>
+    </nav>
+    <main class="p-4 z-0">
+        <div class="welcome text-3xl mb-4 text-center text-white">
+            Hey, I'm Christian!
+        </div>
+        <div class="h-3"></div>
+        <div class="w-full max-w-5xl mx-auto px-4">
+            <div class="flex items-center justify-center gap-4">
+                <model-viewer
+                    src="/static/models/Computer_me.glb"
+                    alt="3D model of a retro computer"
+                    camera-controls
+                    camera-orbit="0deg 80deg 10m"
+                    min-camera-orbit="-180deg 80deg 10m"
+                    max-camera-orbit="180deg 80deg 10m"
+                    disable-zoom
+                    disable-pan
+                    interaction-prompt="none"
+                    interaction-policy="allow-when-focused"
+                    background-color="#000000"
+                    class="w-2/9 h-auto aspect-[3/4]"
+                    field-of-view="22deg"
+                    auto-rotate
+                    auto-rotate-delay="0">
+                </model-viewer>
+                <div class="w-2/5 h-auto relative">
+                    <img
+                        src="/static/images/pixel_dialog_box_2_trans.png"
+                        alt="Speech bubble"
+                        class="w-full z-2"
+                    />
+                    <div class="speech_box mx-10 absolute text-[11px]">
+                        Software Developer and Creative based in Knoxville, TN.
+                        <div class="h-2"></div>
+                        I'll be using this website to document my ongoing projects, 
+                        so feel free to check out what I've been working on.
+                        <div class="h-2"></div>
+                        If you're interested in working together, let's set up a 
+                        meeting! Always open for discussion.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-16"></div>
+        <div class="relative w-full flex flex-col items-center">
+            <!-- Title above the paragraph -->
+            <div class="welcome text-xl mb-4 text-center text-white">
+                a BIT about myself...
+            </div>
+            <div class="h-5"></div>
+            <!-- Box wrapper (relative for corner borders) with responsive height -->
+            <div class="relative w-1/2 h-fit">
+                <!-- Corner borders -->
+                <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-black"></div>
+                <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-black"></div>
+                <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-black"></div>
+                <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-black"></div>
+
+                <!-- Paragraph content -->
+                <div class="p-4 text-center a_bit text-[14px]">
+                    I studied computer science at the University of Tennessee and completed minors in 
+                    Business Administration and Machine Learning. Throughout my program, I gained 
+                    experience in various languages and have developed design skills for different 
+                    student organizations in applications such as Figma and Canva.
+                    <div class="h-2"></div>
+                    In my free time, I like to flex my creative side by doing projects that range 
+                    from jewelry making to game development. When relaxing, you can find me thrifting around 
+                    town, watching my favorite shows, or playing a good game. Feel free to take a look at 
+                    the projects — if any of them interests you I'm always open to conversation. 
+                    Peace!
+                </div>
+            </div>
+        </div>
+        <div class="h-17"></div>
+        <div class="w-full max-w-5xl mx-auto">
+            <div class="flex justify-start">
+                <div class="w-1/4 h-auto relative">
+                    <img
+                        src="/static/images/pixel_folder.png"
+                        alt=""
+                        class="w-full z-2 mx-4"
+                    />
+                    <div class="sample absolute text-[15px] text-white">
+                        A Sample<br>of my<br>Projects
+                    </div>
+                </div>
+                <div class="relative w-9/10 h-auto overflow-hidden top-1.5">
+                    <div class="flex">
+                        <img class="carousel__photo left_item" src="/static/images/tv_screen.jpg">
+                        <img class="carousel__photo right_item" src="/static/images/tv_screen.jpg">
+                        <img class="carousel__photo" src="/static/images/tv_screen.jpg">
+                        <img class="carousel__photo" src="/static/images/tv_screen.jpg">
+                        <img class="carousel__photo" src="/static/images/tv_screen.jpg">
+                        
+                        <div class="carousel__button--next">&gt;</div>
+                        <div class="carousel__button--prev">&lt;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full max-w-5xl mx-auto my-20">
+            <div class="w-1/2 h-auto mx-auto relative">
+                <img src="/static/images/readme.png"/>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
