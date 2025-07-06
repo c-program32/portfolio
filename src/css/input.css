@@ -43,7 +43,7 @@ main {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  transition: transform 2s ease, opacity 0.5s ease, z-index 2s ease;
+  transition: transform 2s ease, opacity 1.5s ease, z-index 2s ease;
   width: 50%;
   padding: 0rem 4rem;
   z-index: 100;
@@ -104,4 +104,38 @@ main {
 .carousel__button--next {
   right:2rem;
   top: 30%;
+}
+
+.mostly-customized-scrollbar {
+  width: 48.7%;
+  height: 91.3%;
+  overflow: auto;
+  margin-inline: auto;
+  margin-left: 0.85rem;
+  padding-right: 2.2rem;
+  margin-top: calc(var(--spacing) * 5.5);
+  position: absolute;
+}
+
+/* Demonstrate a "mostly customized" scrollbar
+ * (won't be visible otherwise if width/height is specified) */
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 18px;
+}
+
+.mostly-customized-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: calc(var(--spacing) * 4.2);  /* Push the scrollbar down */
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: white;
+  border: 2px solid rgb(27, 27, 27);
+  cursor: pointer;
+}
+
+.readme {
+  font-family: monospace;
 }
