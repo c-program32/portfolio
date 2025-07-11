@@ -139,3 +139,17 @@ main {
 .readme {
   font-family: monospace;
 }
+
+.resume-button {
+  outline: 1px solid black;
+  box-shadow: 5px 5px black;
+  font-family: monospace;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+
+.resume-button:hover {
+  transform: scale(1.05);
+}
