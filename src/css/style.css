@@ -1,0 +1,139 @@
+body {
+    background-color: #b0c0d0;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.nav-button:visited {
+  color: inherit;
+}
+
+.nav-button:hover {
+    color: purple;
+}
+
+.mobile-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 5000;
+    top: 1rem;
+    left: 1rem;
+    display: inline;
+}
+
+.navbar-mobile-items {
+    display: flex;
+    margin-right: 2rem;
+    align-items: center;
+}
+
+.nav-box {
+    height: 4rem;
+    width: 9rem;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border: 0.1rem solid black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */  
+    font-family: monospace;
+    user-select: none;
+}
+
+.nav-box:hover {
+    background-color: #a9a9a9;
+    cursor: pointer;
+}
+
+.nav-mobile-right-items {
+    height: 4rem;
+    flex: 1;
+    background-color: #ffffff;
+    border-top: 0.1rem solid black;
+    border-right: 0.1rem solid black;
+    border-bottom: 0.1rem solid black;
+    font-size: 2rem;
+    display: none;
+    justify-content:space-evenly; /* Centers horizontally */
+    align-items: center; /* Centers vertically */  
+    font-family: monospace;
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-mobile-right-items-off {
+    display: flex;
+}
+
+@media(min-width: 1024px) {
+    .mobile-nav {
+        display: none;
+    }
+    
+    .desktop-nav {
+        position: fixed;
+        width: 100%;
+        z-index: 5000;
+        top: 0;
+        left: 0;
+        font-size: 1rem;
+        font-family: monospace;
+        display: inline;
+    }
+
+    .navbar-items {
+        width: 100%;
+        display: flex;
+        margin-inline: auto;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: calc(var(--spacing) * 4);
+    }
+
+    #item-1 {
+        margin-left: 2vw;
+    }
+
+    .right-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 17%;
+        margin-right: 2vw;
+        list-style-type: none;
+    }
+
+    .anchors {
+        display: flex;
+        align-items: center;
+        margin-inline: 1%;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #left-anchor {
+        font-size: 10px;
+        --tw-leading: 1;
+        line-height: 0.5;
+        margin-left: calc(var(--spacing) * 6);
+    }
+
+    #right-anchor {
+        font-size: 10px;
+        --tw-leading: 1;
+        line-height: 0.5;
+        margin-right: calc(var(--spacing) * 6);
+    }
+
+    .nav-hr {
+        flex-grow: 1;
+        margin-inline: 0.5%;
+        border: none;
+        border-top: 1px solid black;
+        margin: 0 0.5%;
+    }
+}
