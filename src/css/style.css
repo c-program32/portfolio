@@ -2,6 +2,7 @@ body {
     background-color: #b0c0d0;
 }
 
+/* NAVBAR */
 .desktop-nav {
     display: none;
 }
@@ -19,12 +20,12 @@ body {
 }
 
 .mobile-nav {
+    display: inline;
+    top: 1rem;
+    left: 1rem;
     position: fixed;
     width: 100%;
     z-index: 5000;
-    top: 1rem;
-    left: 1rem;
-    display: inline;
 }
 
 .navbar-mobile-items {
@@ -34,16 +35,16 @@ body {
 }
 
 .nav-box {
+    display: flex;
     height: 4rem;
     width: 9rem;
     flex-shrink: 0;
     background-color: #ffffff;
     border: 0.1rem solid black;
     font-size: 2rem;
-    display: flex;
+    font-family: monospace;
     justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */  
-    font-family: monospace;
     user-select: none;
 }
 
@@ -53,20 +54,20 @@ body {
 }
 
 .nav-mobile-right-items {
+    display: none;
+    margin: 0;
+    padding: 0;
     height: 4rem;
     flex: 1;
     background-color: #ffffff;
     border-top: 0.1rem solid black;
     border-right: 0.1rem solid black;
     border-bottom: 0.1rem solid black;
-    font-size: 2rem;
-    display: none;
-    justify-content:space-evenly; /* Centers horizontally */
-    align-items: center; /* Centers vertically */  
     font-family: monospace;
+    font-size: 2rem;
+    justify-content:space-evenly;
+    align-items: center;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-mobile-right-items-off {
@@ -79,19 +80,19 @@ body {
     }
     
     .desktop-nav {
+        display: inline;
+        top: 0;
+        left: 0;
         position: fixed;
         width: 100%;
         z-index: 5000;
-        top: 0;
-        left: 0;
         font-size: 1rem;
         font-family: monospace;
-        display: inline;
     }
 
     .navbar-items {
-        width: 100%;
         display: flex;
+        width: 100%;
         margin-inline: auto;
         justify-content: space-between;
         align-items: center;
@@ -104,9 +105,9 @@ body {
 
     .right-nav {
         display: flex;
-        justify-content: space-between;
         width: 17%;
         margin-right: 2vw;
+        justify-content: space-between;
         list-style-type: none;
     }
 
