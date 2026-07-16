@@ -55,7 +55,28 @@
         </div>
     </nav>
     <main>
-        
+        <div class="welcome">
+            Hey, I'm Christian! :^]
+        </div>
+        <div class="hero-container">
+            <model-viewer
+                src="/static/models/Computer_me.glb"
+                alt="3D model of a retro computer"
+                camera-controls
+                camera-orbit="0deg 80deg 10m"
+                min-camera-orbit="-180deg 80deg 10m"
+                max-camera-orbit="180deg 80deg 10m"
+                disable-zoom
+                disable-pan
+                interaction-prompt="none"
+                interaction-policy="allow-when-focused"
+                background-color="#000000"
+                class="computer-model"
+                field-of-view="22deg"
+                auto-rotate
+                auto-rotate-delay="0">
+            </model-viewer>
+        </div>
     </main>
 </body>
 </html>

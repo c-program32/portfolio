@@ -36,8 +36,8 @@ body {
 
 .nav-box {
     display: flex;
-    height: 4rem;
-    width: 9rem;
+    height: 3rem;
+    width: 8rem;
     flex-shrink: 0;
     background-color: #ffffff;
     border: 0.1rem solid black;
@@ -57,7 +57,7 @@ body {
     display: none;
     margin: 0;
     padding: 0;
-    height: 4rem;
+    height: 3rem;
     flex: 1;
     background-color: #ffffff;
     border-top: 0.1rem solid black;
@@ -140,4 +140,20 @@ body {
         border-top: 1px solid black;
         margin: 0 0.5%;
     }
+}
+
+.welcome {
+    font-family: 'Press Start 2P';
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 6rem;
+    text-align: center;
+    text-shadow: 3px 3px black;
+}
+
+.computer-model {
+    width: 17rem;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    margin: auto;
 }
