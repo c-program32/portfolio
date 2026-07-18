@@ -23,7 +23,6 @@ function setEventListeners() {
 }
 
 // Next navigation handler
-
 function moveNext() {
   if (!moving) {
     slides = [wrap(slides[0] + 1), wrap(slides[1] + 1)];
@@ -57,7 +56,6 @@ function moveCarouselTo([left, right]) {
     const total = totalItems;
 
     // Wrap-around helpers
-
     const newPrevious = [wrap(left - 1), left];
     const newNext = [right, wrap(right + 1)];
 
