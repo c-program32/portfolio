@@ -17,7 +17,7 @@ body {
 }
 
 .nav-button:hover {
-    color: purple;
+    color: red;
 }
 
 .mobile-nav {
@@ -97,11 +97,9 @@ body {
         width: 100%;
         margin-inline: auto;
         padding-inline: 2rem;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         box-sizing: border-box;
     }
 
@@ -168,11 +166,11 @@ body {
 
 @media(min-width: 1024px) {
     .computer-model {
-        width: 17rem;
+        width: 18rem;
         height: auto;
         aspect-ratio: 3 / 4;
         justify-self: end;
-        margin-right: 2rem;
+        margin-right: 7rem;
     }
 
     .hero_container {
@@ -189,7 +187,8 @@ body {
         width: 40%;
         height: auto;
         justify-self: start;
-        margin-left: -2rem;
+        margin-left: -7rem;
+        top: 1rem;
     }
 
     .welcome_image {
@@ -220,4 +219,68 @@ body {
     text-align: center;
     text-shadow: 3px 3px black;
     margin-top: 2rem;
+}
+
+.about {
+    top: 2rem;
+    position: relative;
+    margin: auto;
+    height: auto;
+    width: 70vw;
+    font-family: monospace;
+    font-size: 2.3vh;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.about_hr {
+    height: 1rem;
+}
+
+.corner {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+}
+
+.corner_tl {
+    top: 0;
+    left: 0;
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+}
+
+.corner_tr {
+    top: 0;
+    right: 0;
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+}
+
+.corner_bl {
+    bottom: 0;
+    left: 0;
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+}
+
+.corner_br {
+    bottom: 0;
+    right: 0;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+}
+
+@media(min-width: 1024px) {
+    .about {
+        position: relative;
+        font-family: monospace;
+        font-size: 1rem;
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        width: 40rem;
+        height: 90%;
+    }
 }
