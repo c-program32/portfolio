@@ -1,7 +1,7 @@
 class DesktopProjects {
 
   slides = [0, 1]; // two slides shown at all times
-  moving = false; // Set moving to false so that the carousel becomes interactive
+  moving = false;  // Set moving to false so that the carousel becomes interactive
 
   constructor(class_name) {
     this.itemClassName = class_name;
@@ -31,8 +31,8 @@ class DesktopProjects {
   setEventListeners() {
     const next = document.getElementsByClassName('folder_button_next')[0],
           prev = document.getElementsByClassName('folder_button_prev')[0];
-    next.addEventListener('click', this.moveNext.bind(this));
-    prev.addEventListener('click', this.movePrev.bind(this));
+    next.addEventListener('click', () => this.moveNext());
+    prev.addEventListener('click', () => this.movePrev());
   }
 
   // Next navigation handler
