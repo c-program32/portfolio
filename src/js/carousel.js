@@ -1,98 +1,135 @@
-const itemClassName = "carousel__photo";
-let items = document.getElementsByClassName(itemClassName),
-    totalItems = items.length,
-    slides = [0, 1],
-    moving = true;
+class DesktopProjects {
 
-// Set classes
-function setInitialClasses() {
-  // Targets the previous, current, and next items
-  // This assumes there are at least three items.
-  items[wrap(slides[0] - 1)].classList.add("prev");
-  items[slides[0]].classList.add("active");
-  items[slides[1]].classList.add("active");
-  items[wrap(slides[1] + 1)].classList.add("next");
-}
+  slides = [0, 1]; // two slides shown at all times
+  moving = false; // Set moving to false so that the carousel becomes interactive
 
-// Set event listeners
-function setEventListeners() {
-  var next = document.getElementsByClassName('carousel__button--next')[0],
-      prev = document.getElementsByClassName('carousel__button--prev')[0];
-  next.addEventListener('click', moveNext);
-  prev.addEventListener('click', movePrev);
-}
+  constructor(class_name) {
+    this.itemClassName = class_name;
+    this.items = document.querySelectorAll("." + class_name);
+    this.totalItems = this.items.length;
 
-// Next navigation handler
-function moveNext() {
-  if (!moving) {
-    slides = [wrap(slides[0] + 1), wrap(slides[1] + 1)];
-    moveCarouselTo(slides);
-  }
-}
-
-// Previous navigation handler
-function movePrev() {
-  if (!moving) {
-    slides = [wrap(slides[0] - 1), wrap(slides[1] - 1)];
-    moveCarouselTo(slides);
-  }
-}
-
-function disableInteraction() {
-  // Set 'moving' to true for the same duration as our transition.
-  // (0.5s = 500ms)
-  
-  moving = true;
-  // setTimeout runs its function once after the given time
-  setTimeout(function(){
-    moving = false
-  }, 900);
-}
-
-function moveCarouselTo([left, right]) {
-  if (!moving) {
-    disableInteraction();
-
-    const total = totalItems;
-
-    // Wrap-around helpers
-    const newPrevious = [wrap(left - 1), left];
-    const newNext = [right, wrap(right + 1)];
-
-    // Create a deduplicated list of all involved indices
-    const activeSlides = Array.from(new Set([...newPrevious, ...newNext]));
-
-    // Reset all items except those in activeSlides
-    for (let i = 0; i < total; i++) {
-      if (!activeSlides.includes(i)) {
-        items[i].className = itemClassName;
-      }
+    if (this.totalItems < 4) {
+      console.warn("Carousel needs at least 4 items.");
+      return;
     }
 
-    // Apply classes
-    items[newPrevious[0]].className = itemClassName + " prev";
-    items[newPrevious[1]].className = itemClassName + " active left_item";
-    items[newNext[0]].className = itemClassName + " active right_item";
-    items[newNext[1]].className = itemClassName + " next";
+    this.setInitialClasses();
+    this.setEventListeners();
+  }
+
+  // Set classes
+  setInitialClasses() {
+    // Targets the previous, current, and next items
+    // This assumes there are at least three items.
+    this.items[this.wrap(this.slides[0] - 1)].classList.add("prev");
+    this.items[this.slides[0]].classList.add("active");
+    this.items[this.slides[1]].classList.add("active");
+    this.items[this.wrap(this.slides[1] + 1)].classList.add("next");
+  }
+
+  // Set event listeners
+  setEventListeners() {
+    const next = document.getElementsByClassName('folder_button_next')[0],
+          prev = document.getElementsByClassName('folder_button_prev')[0];
+    next.addEventListener('click', this.moveNext.bind(this));
+    prev.addEventListener('click', this.movePrev.bind(this));
+  }
+
+  // Next navigation handler
+  moveNext() {
+    if (!this.moving) {
+      this.slides = [this.wrap(this.slides[0] + 1), this.wrap(this.slides[1] + 1)];
+      this.moveCarouselTo(this.slides);
+    }
+  }
+
+  // Previous navigation handler
+  movePrev() {
+    if (!this.moving) {
+      this.slides = [this.wrap(this.slides[0] - 1), this.wrap(this.slides[1] - 1)];
+      this.moveCarouselTo(this.slides);
+    }
+  }
+
+  disableInteraction() {
+    // Set 'moving' to true for the same duration as our transition.
+    // (0.5s = 500ms)
+    
+    this.moving = true;
+    // setTimeout runs its function once after the given time
+    setTimeout(() => {
+        this.moving = false;
+    }, 900);
+  }
+
+  moveCarouselTo([left, right]) {
+    if (!this.moving) {
+      this.disableInteraction();
+
+      // Wrap-around helpers
+      const newPrevious = [this.wrap(left - 1), left],
+            newNext = [right, this.wrap(right + 1)],
+
+            // Create a deduplicated list of all involved indices
+            activeSlides = Array.from(new Set([...newPrevious, ...newNext]));
+
+      // Reset all items except those in activeSlides
+      for (let i = 0; i < this.totalItems; i++) {
+        if (!activeSlides.includes(i)) {
+          this.items[i].className = this.itemClassName;
+        }
+      }
+
+      // Apply classes
+      this.items[newPrevious[0]].className = this.itemClassName + " prev";
+      this.items[newPrevious[1]].className = this.itemClassName + " active left_item";
+      this.items[newNext[0]].className = this.itemClassName + " active right_item";
+      this.items[newNext[1]].className = this.itemClassName + " next";
+    }
+  }
+
+  wrap(i) {
+    return (i + this.totalItems) % this.totalItems;
   }
 }
 
-function initCarousel() {
-
-  if (totalItems < 4) {
-    console.warn("Carousel needs at least 4 items.");
-    return;
-  }
-
-  setInitialClasses();
-  setEventListeners();
-  // Set moving to false so that the carousel becomes interactive
+/*
+class MobileProjects {
+  slide = 0;
   moving = false;
-}
 
-function wrap(i) {
-  return (i + totalItems) % totalItems;
-}
+  constructor(class_name) {
+    this.itemClassName = class_name;
+    this.items = document.querySelectorAll("." + class_name);
+    this.totalItems = this.items.length;
 
-// make it rain
-initCarousel();
+    if (this.totalItems < 2) {
+      console.warn("Carousel needs at least 2 items.");
+      return;
+    }
+
+    this.setInitialClasses();
+    this.setEventListeners();
+  }
+
+  // Set classes
+  setInitialClasses() {
+    // Targets the previous, current, and next items
+    // This assumes there are at least three items.
+    this.items[this.wrap(this.slides[0] - 1)].classList.add("prev");
+    this.items[this.slides[0]].classList.add("active");
+    this.items[this.slides[1]].classList.add("active");
+    this.items[this.wrap(this.slides[1] + 1)].classList.add("next");
+  }
+
+  // Set event listeners
+  setEventListeners() {
+    const next = document.getElementsByClassName('folder_button_next')[0],
+          prev = document.getElementsByClassName('folder_button_prev')[0];
+    next.addEventListener('click', this.moveNext.bind(this));
+    prev.addEventListener('click', this.movePrev.bind(this));
+  }
+}
+*/
+
+const desktop_carousel = new DesktopProjects("project_file")

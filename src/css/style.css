@@ -222,7 +222,7 @@ body {
 }
 
 .about {
-    top: 2rem;
+    top: 1rem;
     position: relative;
     margin: auto;
     height: auto;
@@ -285,12 +285,77 @@ body {
     }
 }
 
-.project_container {
+.desktop_project_container {
     display: none;
 }
 
+.mobile_project_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.floppy {
+    width: 15rem;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.floppy_deck {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__button--prev,
+.carousel__button--next {
+    position: absolute;
+    font-size: 5rem;
+    color: white;
+    font-family: 'Press Start 2P', monospace;
+    -webkit-text-stroke: 3px black;
+    top: 40%;
+    cursor: pointer; 
+    z-index: 1001; /* Sit on top of everything */
+    user-select: none;
+}
+
+.carousel__button--prev {
+    left: 5%;
+}
+
+.carousel__button--next {
+    right: 3%;
+}
+
+.carousel__button--prev:hover, 
+.carousel__button--next:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease;
+}
+
+.sample {
+    margin-top: 3rem;
+    text-align: center;
+    font-family: "PRESS START 2P";
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-shadow: 3px 3px black;
+}
+
 @media(min-width: 1024px) {
-    .project_container {
+    .mobile_project_container {
+        display: none;
+    }
+
+    .desktop_project_container {
         display: grid;
         grid-template-columns: 1fr 2fr;
         align-items: center;
@@ -326,7 +391,7 @@ body {
         height: 2rem;
     }
 
-    .carousel {
+    .project_slides {
         position: relative;
         display: flex;
         width: 100%;
@@ -336,7 +401,7 @@ body {
         overflow: hidden;
     }
 
-    .carousel__photo {
+    .project_file {
         opacity: 0;
         position: absolute;
         width: 15rem;
@@ -344,8 +409,8 @@ body {
         transition: transform 1s ease, opacity 1s ease;
     }
 
-    .carousel__button--prev,
-    .carousel__button--next {
+    .folder_button_prev,
+    .folder_button_next {
         position: absolute;
         font-size: 5rem;
         color: white;
@@ -357,43 +422,43 @@ body {
         user-select: none;
     }
 
-    .carousel__button--prev {
+    .folder_button_prev {
         left: 1.5rem;
     }
 
-    .carousel__button--next {
+    .folder_button_next {
         right: 1.5rem;
     }
-
-    .carousel__button--prev:hover, 
-    .carousel__button--next:hover {
+    
+    .folder_button_prev:hover, 
+    .folder_button_next:hover {
         transform: scale(1.1);
         transition: transform 0.1s ease;
     }
 
-    .carousel__photo.active {
+    .project_file.active {
         opacity: 1;
         z-index: 850;
         transform: translateX(-0%);
     }
 
-    .carousel__photo.left_item {
+    .project_file.left_item {
         opacity: 1;
         z-index: 800;
         transform: translateX(-10rem);
     }
 
-    .carousel__photo.right_item {
+    .project_file.right_item {
         opacity: 1;
         z-index: 800;
         transform: translateX(9.3rem);
     }
 
-    .carousel__photo.next {
+    .project_file.next {
         transform: translateX(250%);
     }
 
-    .carousel__photo.prev {
+    .project_file.prev {
         transform: translateX(-150%);
     }
 }
