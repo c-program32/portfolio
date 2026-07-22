@@ -149,8 +149,6 @@ class DesktopProjects {
   setInitialClasses() {
     // Targets the previous, current, and next items
     // This assumes there are at least three items.
-    this.items[this.slides[0]].classList.add("active");
-    this.items[this.slides[1]].classList.add("active");
     if (this.totalItems > 2) {
       this.items[this.slides[1] + 1].classList.add("next");
     }
@@ -230,8 +228,8 @@ class DesktopProjects {
       if(newPrevious[0] != -1) {
         this.items[newPrevious[0]].className = this.itemClassName + " prev";
       }
-      this.items[newPrevious[1]].className = this.itemClassName + " active left_item";
-      this.items[newNext[0]].className = this.itemClassName + " active right_item";
+      this.items[newPrevious[1]].className = this.itemClassName + " left_item";
+      this.items[newNext[0]].className = this.itemClassName + " right_item";
       if(newNext[1] != this.totalItems) {
         this.items[newNext[1]].className = this.itemClassName + " next";
       }
