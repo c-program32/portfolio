@@ -285,6 +285,7 @@ body {
     }
 }
 
+/* PROJECTS */
 .desktop_project_container {
     display: none;
 }
@@ -449,7 +450,7 @@ body {
         position: absolute;
         width: 15rem;
         height: 19rem;
-        border: 0.5px solid black;
+        border: 0px solid black;
         transition: transform 1s ease, opacity 1s ease;
     }
     .project_file.left_item {
@@ -502,5 +503,134 @@ body {
     .folder_button_prev_off,
     .folder_button_next_off {
         display: none;
+    }
+}
+
+.desktop_readme {
+    display: none;
+}
+
+.mobile_readme {
+    position: relative;
+    display: flex;
+    margin: 3rem auto 0;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+.small_readme {
+    display: block;
+    width: 22rem;
+}
+
+.small_readme_text {
+    position: absolute;
+
+    top: 1.8rem;        /* Start below the title bar */
+    height: 24.7rem;
+
+    overflow-y: auto;
+
+    font-family: monospace;
+    font-size: 1rem;
+    line-height: 1.1;
+
+    /* Firefox */
+    scrollbar-width: none;
+
+    /* IE and old Edge */
+    -ms-overflow-style: none;
+}
+
+/* Chrome, Edge, Safari */
+.small_readme_text::-webkit-scrollbar {
+    display: none;
+}
+
+.small_readme_section {
+    font-size: 1.5rem;
+}
+
+.small_readme_start {
+    margin-top: 1.5rem;
+}
+
+.small_readme_hr {
+  border: none;               /* Removes the default browser border style */
+  height: 2px;                /* Controls the thickness of the line */
+  background-color: #000000;  /* Sets the actual color of the line */
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media(min-width: 1024px) {
+    .mobile_readme {
+        display: none;
+    }
+
+    .desktop_readme {
+        position: relative;
+        display: flex;
+        margin: 5rem auto 0;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .big_readme {
+        display: block;
+        width: 34rem;
+    }
+
+    .big_readme_text {
+        position: absolute;
+
+        top: 1.4rem;        /* Start below the title bar */
+        margin-left: 1.42rem;
+        width: 32.5rem;
+        height: 27.9rem;
+
+        overflow-y: auto;
+
+        font-family: monospace;
+        font-size: .9rem;
+        line-height: 1.1;
+    }
+
+    .big_readme_section {
+        font-size: 1.5rem;
+    }
+
+    .big_readme_start {
+        margin-top: 1.5rem;
+    }
+
+    .big_readme_hr {
+        border: none; 
+        width: 30rem;              
+        height: 2px;                
+        background-color: #000000;  
+        margin-top: -0.5rem;
+        margin-left: 0rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .big_readme_text::-webkit-scrollbar {
+        width: 18px;
+    }
+
+    .big_readme_text::-webkit-scrollbar-track {
+        background: transparent;
+        margin-top: 1.15rem;
+        margin-left: 1rem;
+        margin-bottom: 1.15rem;
+    }
+
+    /* Add a thumb */
+    .big_readme_text::-webkit-scrollbar-thumb {
+        background: white;
+        border: 2px solid rgb(27, 27, 27);
+        cursor: pointer;
     }
 }
