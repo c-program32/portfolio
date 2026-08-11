@@ -51,7 +51,6 @@ class MobileProjects {
   }
 
   check_end() {
-    console.log(this.slide)
     if(this.slide == 0) {
       this.prev.classList.add("floppy_button_prev_off");
     } else {
@@ -62,14 +61,11 @@ class MobileProjects {
 
     if(this.slide == this.totalItems - 1) {
       this.next.classList.add("floppy_button_next_off");
-      console.log("huh")
     } else {
       if (this.next.classList.contains("floppy_button_next_off")){
         this.next.classList.remove("floppy_button_next_off");
       }
     }
-    console.log(this.next.classList)
-    console.log(this.totalItems - 1)
   }
 
   // Next navigation handler
@@ -92,11 +88,10 @@ class MobileProjects {
     if (!this.moving) {
       this.disableInteraction();
 
-      // Wrap-around helpers
       const newPrevious = this.slide - 1,
             newNext = this.slide + 1,
 
-            // Create a deduplicated list of all involved indices
+            // Create a list of all involved indices
             activeSlides = Array.from([newPrevious, this.slide, newNext]);
 
       // Reset all items except those in activeSlides

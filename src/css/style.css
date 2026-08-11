@@ -549,7 +549,7 @@ body {
 }
 
 .small_readme_section {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .small_readme_start {
@@ -633,4 +633,55 @@ body {
         border: 2px solid rgb(27, 27, 27);
         cursor: pointer;
     }
+}
+
+/* PROJECTS */
+.skills_header {
+    font-family: "PRESS START 2P";
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 3px 3px black;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.skill_icons {
+    padding-top: 3rem;
+    width: 40rem;
+    margin: auto
+}
+
+.icon_set_1, .icon_set_2, .icon_set_3{
+    display: grid;
+    grid-template-areas: "a a a";
+    grid-auto-columns: 10rem;
+    gap: 4rem;
+    justify-content: space-evenly;
+}
+
+.icon_set_2, .icon_set_3 {
+    padding-top: 3rem;
+}
+
+.icon {
+    text-align: center;
+    cursor: pointer;
+}
+
+.icon_image {
+    width: 4rem;
+    height: 4rem;
+}
+
+.icon_label {
+    padding-top: 0.8rem;
+    font-family: "PRESS START 2P";
+    color: black;
+    font-size: 0.7rem;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease;
+    filter: brightness(170%);
 }
