@@ -635,7 +635,7 @@ body {
     }
 }
 
-/* PROJECTS */
+/* SKILLS */
 .skills_header {
     font-family: "PRESS START 2P";
     color: white;
@@ -646,26 +646,27 @@ body {
 }
 
 .skill_icons {
-    padding-top: 3rem;
     width: 40rem;
     margin: auto
 }
 
-.icon_set_1, .icon_set_2, .icon_set_3{
+.icon_row{
+    padding-top: 3rem;
     display: grid;
-    grid-template-areas: "a a a";
-    grid-auto-columns: 10rem;
+    grid-template-columns: repeat(3, 10rem);
     gap: 4rem;
     justify-content: space-evenly;
-}
-
-.icon_set_2, .icon_set_3 {
-    padding-top: 3rem;
 }
 
 .icon {
     text-align: center;
     cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease;
+    filter: brightness(150%);
 }
 
 .icon_image {
@@ -678,10 +679,4 @@ body {
     font-family: "PRESS START 2P";
     color: black;
     font-size: 0.7rem;
-}
-
-.icon:hover {
-    transform: scale(1.1);
-    transition: transform 0.1s ease;
-    filter: brightness(170%);
 }
