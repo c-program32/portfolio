@@ -234,6 +234,28 @@ class DesktopProjects {
   }
 }
 
+const carousel = document.querySelector("#mobile_carousel");
+const slides = carousel.querySelectorAll(".floppy_link");
+const dots = document.querySelectorAll(".dot");
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const index = [...slides].indexOf(entry.target);
+
+                dots.forEach(dot => dot.classList.remove("active"));
+                dots[index].classList.add("active");
+            }
+        });
+    },
+    {
+        root: carousel,
+        threshold: 0.6
+    }
+);
+
+slides.forEach(slide => observer.observe(slide));
+
 class OldDesktopProjects {
 
   slides = [0, 1]; // two slides shown at all times
@@ -330,4 +352,4 @@ class OldDesktopProjects {
 }
 
 const desktop_carousel = new DesktopProjects("project_file");
-const mobile_carousel = new MobileProjects("floppy");
+// const mobile_carousel = new MobileProjects("floppy");

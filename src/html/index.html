@@ -117,15 +117,22 @@
             <div class="sample">
                 A Sample of My Projects
             </div>
-            <div class="floppy_deck">
-                <a href="/" class="floppy-link">
+            <div class="floppy_deck" id="mobile_carousel">
+                <a href="/" class="floppy_link">
                     <img class="floppy" src="/static/images/edited_floppy.png">
+                </a>
+                <a href="/" class="floppy_link">
                     <img class="floppy" src="/static/images/edited_floppy.png">
+                </a>
+                <a href="/" class="floppy_link">
                     <img class="floppy" src="/static/images/edited_floppy.png">
                 </a>
             </div>
-            <div class="floppy_button_next">&gt;</div>
-            <div class="floppy_button_prev floppy_button_prev_off">&lt;</div>
+            <div class="pagination" id="pagination">
+                <button class="dot active" aria-label="Go to slide 1"></button>
+                <button class="dot" aria-label="Go to slide 2"></button>
+                <button class="dot" aria-label="Go to slide 3"></button>
+            </div>
         </div>
         <div class="desktop_project_container">
             <div class="project_folder">
@@ -173,7 +180,6 @@ University of Tennessee, Knoxville
 Bachelor's in Computer Science
 Minors: Machine Learning and
         Business Administration
-
 GPA: 3.74
                 </pre>
                 <hr class="small_readme_hr">
@@ -257,19 +263,19 @@ documentation updates for software inference.
                 <div class="icon">
                     <img src="/static/images/skills/pixel_html.png" class="icon_image">
                     <div class="icon_label">
-                        html.exe
+                        html
                     </div>
                 </div>
                 <div class="icon">
                     <img src="/static/images/skills/pixel_css.png" class="icon_image">
                     <div class="icon_label">
-                        css.exe
+                        css
                     </div>
                 </div>
                 <div class="icon">
                     <img src="/static/images/skills/pixel_figma_alt.png" class="icon_image">
                     <div class="icon_label">
-                        figma.exe
+                        figma
                     </div>
                 </div>
             </div>
@@ -277,19 +283,19 @@ documentation updates for software inference.
                 <div class="icon">
                     <img src="/static/images/skills/pixel_excel_alt.png" class="icon_image">
                     <div class="icon_label">
-                        excel.exe
+                        excel
                     </div>
                 </div>
                 <div class="icon">
                     <img src="/static/images/skills/pixel_python.png" class="icon_image">
                     <div class="icon_label">
-                        python.exe
+                        python
                     </div>
                 </div>
                 <div class="icon">
                     <img src="/static/images/skills/pixel_sql.png" class="icon_image">
                     <div class="icon_label">
-                        sql.exe
+                        sql
                     </div>
                 </div>
             </div>
@@ -297,19 +303,88 @@ documentation updates for software inference.
                 <div class="icon">
                     <img src="/static/images/skills/pixel_cpp.png" class="icon_image">
                     <div class="icon_label">
-                        c++.exe
+                        c++
                     </div>
                 </div>
                 <div class="icon">
                     <img src="/static/images/skills/pixel_js.png" class="icon_image">
                     <div class="icon_label">
-                        javascript.exe
+                        javascript
                     </div>
                 </div>
                 <div class="icon">
                     <img src="/static/images/skills/pixel_git (1).png" class="icon_image">
                     <div class="icon_label">
-                        git.exe
+                        git
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lets_connect">
+            Let's Connect!
+        </div>
+        <div class="contact_section">
+            <div class="contact_link" id="email_form_btn">
+                Email
+            </div>
+            <a class="contact_link" 
+               href="https://github.com/cgraha37" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                GitHub
+            </a>
+            <a class="contact_link" 
+               href="https://www.linkedin.com/in/christiangraham8/" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                LinkedIn
+            </a>
+        </div>
+        <div class="terminal_background" id="terminal_background_id">
+            <div class="terminal_window">
+                <div class="terminal_body">
+                    Electronic Mail Messagenger
+                    <form class="email_form">
+                        <div class="copy_string">
+                            <div id="email_copy">
+                                To: christiangraham8@gmail.com
+                            </div>
+                            <div class="copied_off" id="copied_msg">
+                                Copied!
+                            </div>
+                        </div>
+                        <div class="form_email_input">
+                            <label for="form_email_field">
+                                From:
+                            </label>
+                            <input type="email" 
+                                id="form_email_field"
+                                pattern=".+@example\.com" 
+                                required 
+                            />
+                        </div>
+                        <div class="form_subject_input">
+                            <label for="form_subject_field">
+                                Subject: 
+                            </label>
+                            <input type="text" 
+                                id="form_subject_field"
+                                minlength="4" 
+                                maxlength="50"
+                            />
+                        </div>
+                        <textarea name="message" 
+                            class="form_message_field" 
+                            rows="4" 
+                            placeholder="Type your message..."></textarea>
+                    </form>
+                </div>
+                <div class="form_buttons">
+                    <div id="form_close_btn">
+                        Close
+                    </div>
+                    <div id="form_submit_btn">
+                        Submit
                     </div>
                 </div>
             </div>
