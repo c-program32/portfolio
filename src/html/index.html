@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/images/pixel_retro_logo.png">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="../js/carousel.js" defer></script>
     <script src="../js/index.js" defer></script>
@@ -23,7 +24,7 @@
                     <a href="#about" class="nav-button">About</a>
                 </li>
                 <li>
-                    <a href="#projects" class="nav-button">Projects</a>
+                    <a href="#small_sample" class="nav-button">Experience</a>
                 </li>
                 <li>
                     <a href="#contact" class="nav-button">Contact</a>
@@ -33,29 +34,25 @@
     </nav>
     <nav class="desktop-nav">
         <div class="navbar-items">
-            <div>
+            <a href="#welcome" class="start_button">
+                <img class="nav_logo" src="/static/images/pixel_retro_logo.png">
                 Christian G.
-            </div>
+            </a>
             <ul class="right-nav">
                 <li>
                     <a href="#about" class="nav-button">About</a>
                 </li>
                 <li>
-                    <a href="#projects" class="nav-button">Projects</a>
+                    <a href="#projects" class="nav-button">Experience</a>
                 </li>
                 <li>
                     <a href="#contact" class="nav-button">Contact</a>
                 </li>
             </ul>
         </div>
-        <div class="anchors">
-            <span id="left-anchor">■</span>
-            <hr class="nav-hr">
-            <span id="right-anchor">■</span>
-        </div>
     </nav>
     <main>
-        <div class="welcome">
+        <div class="welcome" id="welcome">
             Hey, I'm Christian! :^]
         </div>
         <div class="hero_container">
@@ -94,7 +91,7 @@
                 </div>
             </div>
         </div>
-        <div class="a_bit">
+        <div class="a_bit" id="about">
             a BIT about myself
         </div>
         <div class="about">
@@ -114,7 +111,7 @@
                 Peace!
         </div>
         <div class="mobile_project_container">
-            <div class="sample">
+            <div class="sample" id="small_sample">
                 A Sample of My Projects
             </div>
             <div class="floppy_deck" id="mobile_carousel">
@@ -134,7 +131,7 @@
                 <button class="dot" aria-label="Go to slide 3"></button>
             </div>
         </div>
-        <div class="desktop_project_container">
+        <div class="desktop_project_container" id="projects">
             <div class="project_folder">
                 <img
                     src="/static/images/pixel_folder.png"
@@ -255,6 +252,11 @@ documentation updates for software inference.
                 </pre>
             </div>
         </div>
+        <div class="resume_container">
+            <div class="resume_button">
+                Get Resume
+            </div>
+        </div>
         <div class="skills_header">
             Skills
         </div>
@@ -320,7 +322,7 @@ documentation updates for software inference.
                 </div>
             </div>
         </div>
-        <div class="lets_connect">
+        <div class="lets_connect" id="contact">
             Let's Connect!
         </div>
         <div class="contact_section">
@@ -343,16 +345,14 @@ documentation updates for software inference.
         <div class="terminal_background" id="terminal_background_id">
             <div class="terminal_window">
                 <div class="terminal_body">
-                    Electronic Mail Messagenger
-                    <form class="email_form">
-                        <div id="my_email">
-                            To: christiangraham8@gmail.com
-                        </div>
+                    Electronic Mail Messenger
+                    <form class="email_form" action="https://api.web3forms.com/submit" method="POST" id="form">
+                        <input type="hidden" name="access_key" value="3d8193b6-9d86-4d3d-b96e-3008e97da869">
                         <div class="copy_string">
                             <div id="email_copy">
                                 To: christiangraham8@gmail.com
                             </div>
-                            <div class="copied_off" id="copied_msg">
+                            <div id="copied_msg">
                                 Copied!
                             </div>
                         </div>
@@ -362,7 +362,8 @@ documentation updates for software inference.
                             </label>
                             <input type="email" 
                                 id="form_email_field"
-                                pattern=".+@example\.com" 
+                                name="email"
+                                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
                                 required 
                             />
                         </div>
@@ -371,6 +372,7 @@ documentation updates for software inference.
                                 Subject: 
                             </label>
                             <input type="text" 
+                                name="subject"
                                 id="form_subject_field"
                                 minlength="4" 
                                 maxlength="50"
@@ -380,18 +382,27 @@ documentation updates for software inference.
                             class="form_message_field" 
                             rows="4" 
                             placeholder="Type your message..."></textarea>
+                        <div class="form_buttons">
+                            <button id="form_close_btn">
+                                Close
+                            </button>
+                            <button id="form_submit_btn" type="submit">
+                                Submit
+                            </button>
+                        </div>
+                        <div id="result"></div>
                     </form>
-                </div>
-                <div class="form_buttons">
-                    <div id="form_close_btn">
-                        Close
-                    </div>
-                    <div id="form_submit_btn">
-                        Submit
-                    </div>
                 </div>
             </div>
         </div>
+        <div class="home_arrow_container">
+            <a href="#welcome" class="arrow_box">
+                <img class="arrow_img" src="/static/images/pixel_arrow_box_5.png">
+            </a>
+        </div>
+        <footer>
+            © 2026 Christian Graham. All rights reserved.
+        </footer>
     </main>
 </body>
 </html>
