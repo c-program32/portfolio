@@ -7,31 +7,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.home_arrow_container {
-    width: 100%;
-    display: none;
-    position: fixed;
-    bottom: 5%;
-    right: 5%;
-}
-
-.home_arrow_container_on {
-    display: flex;
-}
-
-.arrow_box {
-    margin-left: auto;
-}
-.arrow_box:active {
-    transform: scale(0.9);
-    transition: transform 0.05s ease;
-}
-
-.arrow_img {
-    width: 4rem;
-    height: 4rem;
-}
-
 /* NAVBAR */
 .desktop-nav {
     display: none;
@@ -101,6 +76,31 @@ html {
 
 .nav-button:active {
     color: red;
+}
+
+.home_arrow_container {
+    width: 100%;
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+
+.home_arrow_container_on {
+    display: flex;
+}
+
+.arrow_box {
+    margin-left: auto;
+}
+.arrow_box:active {
+    transform: scale(0.9);
+    transition: transform 0.05s ease;
+}
+
+.arrow_img {
+    width: 4rem;
+    height: 4rem;
 }
 
 @media(min-width: 1024px) {
