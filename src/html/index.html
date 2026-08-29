@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/static/images/pixel_retro_logo.png">
+    <link rel="icon" type="image/png" href="/static/images/elements/pixel_retro_logo.png">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script src="../js/carousel.js" defer></script>
     <script src="../js/index.js" defer></script>
@@ -16,7 +16,7 @@
 <body>
     <nav class="mobile-nav">
         <div class="navbar-mobile-items">
-            <div class="nav-box" id="nav-button">
+            <div class="nav-box" id="menu-button">
                 ≡ Menu
             </div>
             <ul class="nav-mobile-right-items" id="nav-mobile-right-items">
@@ -31,11 +31,16 @@
                 </li>
             </ul>
         </div>
+        <div class="home_arrow_container" id="home_arrow">
+            <a href="#welcome" class="arrow_box">
+                <img class="arrow_img" src="/static/images/elements/pixel_arrow_box_5.png">
+            </a>
+        </div>
     </nav>
     <nav class="desktop-nav">
         <div class="navbar-items">
             <a href="#welcome" class="start_button">
-                <img class="nav_logo" src="/static/images/pixel_retro_logo.png">
+                <img class="nav_logo" src="/static/images/elements/pixel_retro_logo.png">
                 Christian G.
             </a>
             <ul class="right-nav">
@@ -57,7 +62,7 @@
         </div>
         <div class="hero_container">
             <model-viewer
-                src="/static/models/Computer_me.glb"
+                src="/static/models/Computer.glb"
                 alt="3D model of a retro computer"
                 camera-controls
                 camera-orbit="0deg 80deg 10m"
@@ -75,7 +80,7 @@
             </model-viewer>
                 <div class="welcome_message">
                     <img
-                        src="/static/images/pixel_dialog_box_2_trans.png"
+                        src="/static/images/elements/pixel_dialog_box_2_trans.png"
                         alt="Speech bubble"
                         class="welcome_image"
                     />
@@ -116,13 +121,13 @@
             </div>
             <div class="floppy_deck" id="mobile_carousel">
                 <a href="/" class="floppy_link">
-                    <img class="floppy" src="/static/images/edited_floppy.png">
+                    <img class="floppy" src="/static/images/elements/edited_floppy.png">
                 </a>
                 <a href="/" class="floppy_link">
-                    <img class="floppy" src="/static/images/edited_floppy.png">
+                    <img class="floppy" src="/static/images/elements/edited_floppy.png">
                 </a>
                 <a href="/" class="floppy_link">
-                    <img class="floppy" src="/static/images/edited_floppy.png">
+                    <img class="floppy" src="/static/images/elements/edited_floppy.png">
                 </a>
             </div>
             <div class="pagination" id="pagination">
@@ -134,7 +139,7 @@
         <div class="desktop_project_container" id="projects">
             <div class="project_folder">
                 <img
-                    src="/static/images/pixel_folder.png"
+                    src="/static/images/elements/pixel_folder.png"
                     alt=""
                     class="folder_image"
                 />
@@ -167,7 +172,7 @@
             </div>
         </div>
         <div class="mobile_readme">
-            <img class="small_readme" src="/static/images/small_readme.png">
+            <img class="small_readme" src="/static/images/elements/small_readme.png">
             <div class="small_readme_text">
                 <div class="small_readme_section small_readme_start">
                     Education
@@ -177,7 +182,6 @@ University of Tennessee, Knoxville
 Bachelor's in Computer Science
 Minors: Machine Learning and
         Business Administration
-GPA: 3.74
                 </pre>
                 <hr class="small_readme_hr">
                 <div class="small_readme_section">
@@ -203,14 +207,14 @@ June 2022 - January 2023
             </div>
         </div>
         <div class="desktop_readme">
-            <img class="big_readme" src="/static/images/readme_no_bar.png">
+            <img class="big_readme" src="/static/images/elements/readme_no_bar.png">
             <div class="big_readme_text">
                 <div class="big_readme_section big_readme_start">
                     Education
                 </div>
                 <pre>
 University of Tennessee, Knoxville       Graduation: May 2024
-Bachelor of Science: Computer Science               GPA: 3.74
+Bachelor of Science: Computer Science
 Minors: Machine Learning and Business Administration
                 </pre>
                 <hr class="big_readme_hr">
@@ -218,6 +222,17 @@ Minors: Machine Learning and Business Administration
                     Experience
                 </div>
                 <pre>
+Technical Data Clerk                    August 2025 - Present
+Pellissippi State                     Location: KNoxville, TN
+
+    Developed Python scripts to automate data-processing 
+tasks and improve workflow efficiency. Cleaned and analyzed 
+student datasets in Excel to support program evaluation. 
+Improved Gravyty chatbot accuracy by resolving 
+knowledge-base gaps and used Navigate360 to identify at-risk 
+students and coordinate academic support.
+
+
 Test Automation Intern             January 2025 - August 2025
 iXsystems Inc.                        Location: Maryville, TN
 
@@ -253,9 +268,9 @@ documentation updates for software inference.
             </div>
         </div>
         <div class="resume_container">
-            <div class="resume_button">
+            <a class="resume_button" href="/static/files/resume_5_15_26.pdf" target="_blank">
                 Get Resume
-            </div>
+            </a>
         </div>
         <div class="skills_header">
             Skills
@@ -390,15 +405,10 @@ documentation updates for software inference.
                                 Submit
                             </button>
                         </div>
-                        <div id="result"></div>
+                        <div id="result">hi mom</div>
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="home_arrow_container">
-            <a href="#welcome" class="arrow_box">
-                <img class="arrow_img" src="/static/images/pixel_arrow_box_5.png">
-            </a>
         </div>
         <footer>
             © 2026 Christian Graham. All rights reserved.
