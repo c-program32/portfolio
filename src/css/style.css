@@ -36,8 +36,8 @@ html {
     border: 0.1rem solid black;
     font-size: 4.5vw;
     font-family: monospace;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
+    justify-content: center;
+    align-items: center;
     user-select: none;
 }
 
@@ -116,7 +116,7 @@ html {
         display: inline;
         background-color: white;
         position: fixed;
-        width: 77rem;   /* Won't shrink smaller than this */
+        width: 77rem;
         max-width: 90%;
         z-index: 5000;
         font-size: 1rem;
@@ -171,7 +171,7 @@ html {
 }
 
 /* HERO SECTION */
-.welcome {
+#welcome {
     font-family: 'Press Start 2P';
     font-size: 1.5rem;
     line-height: 1.5;
@@ -566,7 +566,7 @@ html {
 .small_readme_text {
     position: absolute;
 
-    top: 1.8rem;        /* Start below the title bar */
+    top: 1.8rem;
     height: 24.7rem;
 
     overflow-y: auto;
@@ -593,9 +593,9 @@ html {
 }
 
 .small_readme_hr {
-  border: none;               /* Removes the default browser border style */
-  height: 2px;                /* Controls the thickness of the line */
-  background-color: #000000;  /* Sets the actual color of the line */
+  border: none;
+  height: 2px;
+  background-color: #000000;
   margin-top: -0.5rem;
   margin-bottom: 1.5rem;
 }
@@ -974,7 +974,7 @@ html {
     height: 2rem;
     width: 5rem;
     display: flex;
-    align-items: center; /* Aligns text vertically */
+    align-items: center;
     justify-content: center;
     font-family: monospace;
     font-size: 1.3rem;

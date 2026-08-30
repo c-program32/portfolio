@@ -26,7 +26,7 @@ class DesktopProjects {
   // Set classes
   setInitialClasses() {
     // Targets the previous, current, and next items
-    // This assumes there are at least three items.
+    // This assumes there are at least three items
     if (this.totalItems > 2) {
       this.items[this.slides[1] + 1].classList.add("next");
     }
@@ -39,9 +39,6 @@ class DesktopProjects {
   }
 
   disableInteraction() {
-    
-    // Set 'moving' to true for the same duration as our transition.
-    // (0.5s = 500ms)
     this.moving = true;
     // setTimeout runs its function once after the given time
     setTimeout(() => {
