@@ -930,7 +930,7 @@ html {
     background-color: black;
     color:rgb(0, 180, 0);
     font-size: 1.2rem;
-    width: 97.5%;
+    width: 95%;
     flex-grow: 1;
     outline: none;
     caret-shape: block;
