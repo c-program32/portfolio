@@ -118,7 +118,7 @@ class DesktopProjects {
 }
 
 const desktop_carousel = new DesktopProjects("project_file");
-const carousel = document.querySelector("#mobile_carousel");
+const carousel = document.querySelector("#mobile-carousel");
 const slides = carousel.querySelectorAll(".floppy_link");
 const dots = document.querySelectorAll(".dot");
 const observer = new IntersectionObserver(

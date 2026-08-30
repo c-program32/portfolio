@@ -1,193 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="src/css/style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="static/images/elements/pixel_retro_logo.png">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script src="src/js/carousel.js" defer></script>
-    <script src="src/js/index.js" defer></script>
-    <title>Christian G. :^]</title>
-</head>
-<body>
-    <nav class="mobile-nav">
-        <div class="navbar-mobile-items">
-            <div class="nav-box" id="menu-button">
-                ≡ Menu
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="src/css/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="static/images/elements/pixel_retro_logo.png">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script src="src/js/carousel.js" defer></script>
+        <script src="src/js/index.js" defer></script>
+        <title>Christian G. :^]</title>
+    </head>
+    <body>
+        <nav class="mobile_nav">
+            <div class="navbar_mobile_items">
+                <div class="nav_box" id="menu-button">
+                    ≡ Menu
+                </div>
+                <ul class="nav_mobile_right_items" id="nav-mobile-right-items">
+                    <li>
+                        <a href="#about" class="nav_button">About</a>
+                    </li>
+                    <li>
+                        <a href="#small-sample" class="nav_button">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav_button">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav-mobile-right-items" id="nav-mobile-right-items">
-                <li>
-                    <a href="#about" class="nav-button">About</a>
-                </li>
-                <li>
-                    <a href="#small_sample" class="nav-button">Experience</a>
-                </li>
-                <li>
-                    <a href="#contact" class="nav-button">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="home_arrow_container" id="home_arrow">
-            <a href="#welcome" class="arrow_box">
-                <img class="arrow_img" src="static/images/elements/pixel_arrow_box_5.png">
-            </a>
-        </div>
-    </nav>
-    <nav class="desktop-nav">
-        <div class="navbar-items">
-            <a href="#welcome" class="start_button">
-                <img class="nav_logo" src="static/images/elements/pixel_retro_logo.png">
-                Christian G.
-            </a>
-            <ul class="right-nav">
-                <li>
-                    <a href="#about" class="nav-button">About</a>
-                </li>
-                <li>
-                    <a href="#projects" class="nav-button">Experience</a>
-                </li>
-                <li>
-                    <a href="#contact" class="nav-button">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <main>
-        <div class="welcome" id="welcome">
-            Hey, I'm Christian! :^]
-        </div>
-        <div class="hero_container">
-            <model-viewer
-                src="static/models/Computer.glb"
-                alt="3D model of a retro computer"
-                camera-controls
-                camera-orbit="0deg 80deg 10m"
-                min-camera-orbit="-180deg 80deg 10m"
-                max-camera-orbit="180deg 80deg 10m"
-                disable-zoom
-                disable-pan
-                interaction-prompt="none"
-                interaction-policy="allow-when-focused"
-                background-color="#000000"
-                class="computer-model"
-                field-of-view="22deg"
-                auto-rotate
-                auto-rotate-delay="0">
-            </model-viewer>
-                <div class="welcome_message">
+            <div class="home_arrow_container" id="home-arrow">
+                <a href="#welcome" class="arrow_box">
+                    <img class="arrow_img" src="static/images/elements/pixel_arrow_box_5.png">
+                </a>
+            </div>
+        </nav>
+        <nav class="desktop_nav">
+            <div class="navbar_items">
+                <a href="#welcome" class="start_button">
+                    <img class="nav_logo" src="static/images/elements/pixel_retro_logo.png">
+                    Christian G.
+                </a>
+                <ul class="right-nav">
+                    <li>
+                        <a href="#about" class="nav_button">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="nav_button">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav_button">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="welcome">
+                Hey, I'm Christian! :^]
+            </div>
+            <div class="hero_container">
+                <model-viewer
+                    src="static/models/Computer.glb"
+                    alt="3D model of a retro computer"
+                    camera-controls
+                    camera-orbit="0deg 80deg 10m"
+                    min-camera-orbit="-180deg 80deg 10m"
+                    max-camera-orbit="180deg 80deg 10m"
+                    disable-zoom
+                    disable-pan
+                    interaction-prompt="none"
+                    interaction-policy="allow-when-focused"
+                    background-color="#000000"
+                    class="computer-model"
+                    field-of-view="22deg"
+                    auto-rotate
+                    auto-rotate-delay="0">
+                </model-viewer>
+                    <div class="welcome_message">
+                        <img
+                            src="static/images/elements/pixel_dialog_box_2_trans.png"
+                            alt="Speech bubble"
+                            class="welcome_image"
+                        />
+                        <div class="welcome_text">
+                            Software Developer and Creative based in Knoxville, TN.
+                            <div class="welcome_hr"></div>
+                            I'll be using this website to document my ongoing projects, 
+                            so feel free to check out what I've been working on.
+                            <div class="welcome_hr"></div>
+                            If you're interested in working together, let's set up a 
+                            meeting! Always open for discussion.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a_bit" id="about">
+                a BIT about myself
+            </div>
+            <div class="about">
+                <div class="corner corner_tl"></div>
+                <div class="corner corner_tr"></div>
+                <div class="corner corner_bl"></div>
+                <div class="corner corner_br"></div>
+                    My name is Christian Graham. I studied Computer Science at the University of 
+                    Tennessee, where I also minored in Business Administration and Machine Learning. 
+                    Throughout my studies and professional experience, I've worked with a variety of 
+                    programming languages and developed my design skills using tools like Figma and Canva.
+                    <div class="about_hr"></div>
+                    In my free time, I flex my creative side by doing projects that range 
+                    from jewelry making to game development. When relaxing, you can find me thrifting around 
+                    town, watching my favorite shows, or playing a good game. Feel free to take a look at 
+                    my projects. Peace!
+            </div>
+            <div class="mobile_project_container">
+                <div class="sample" id="small-sample">
+                    A Sample of My Projects
+                </div>
+                <div class="floppy_deck" id="mobile-carousel">
+                    <a href="/" class="floppy_link">
+                        <img class="floppy" src="static/images/elements/edited_floppy.png">
+                    </a>
+                    <a href="/" class="floppy_link">
+                        <img class="floppy" src="static/images/elements/edited_floppy.png">
+                    </a>
+                    <a href="/" class="floppy_link">
+                        <img class="floppy" src="static/images/elements/edited_floppy.png">
+                    </a>
+                </div>
+                <div class="pagination">
+                    <button class="dot active"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                </div>
+            </div>
+            <div class="desktop_project_container" id="projects">
+                <div class="project_folder">
                     <img
-                        src="static/images/elements/pixel_dialog_box_2_trans.png"
-                        alt="Speech bubble"
-                        class="welcome_image"
+                        src="static/images/elements/pixel_folder.png"
+                        alt=""
+                        class="folder_image"
                     />
-                    <div class="welcome_text">
-                        Software Developer and Creative based in Knoxville, TN.
-                        <div class="welcome_hr"></div>
-                        I'll be using this website to document my ongoing projects, 
-                        so feel free to check out what I've been working on.
-                        <div class="welcome_hr"></div>
-                        If you're interested in working together, let's set up a 
-                        meeting! Always open for discussion.
+                    <div class="folder_text">
+                        A Sample
+                        <div class="folder_hr">
+                        </div>
+                        of my
+                        <div class="folder_hr">
+                        </div>
+                        Projects
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="a_bit" id="about">
-            a BIT about myself
-        </div>
-        <div class="about">
-            <div class="corner corner_tl"></div>
-            <div class="corner corner_tr"></div>
-            <div class="corner corner_bl"></div>
-            <div class="corner corner_br"></div>
-                [I studied computer science at the University of Tennessee and completed minors in 
-                Business Administration and Machine Learning. Throughout my program,](This needs to 
-                be changed) I gained experience in various languages and have developed design 
-                skills for different student organizations in applications such as Figma and Canva.
-                <div class="about_hr"></div>
-                In my free time, I like to flex my creative side by doing projects that range 
-                from jewelry making to game development. When relaxing, you can find me thrifting around 
-                town, watching my favorite shows, or playing a good game. Feel free to take a look at 
-                the projects — if any of them interests you I'm always open to conversation. 
-                Peace!
-        </div>
-        <div class="mobile_project_container">
-            <div class="sample" id="small_sample">
-                A Sample of My Projects
-            </div>
-            <div class="floppy_deck" id="mobile_carousel">
-                <a href="/" class="floppy_link">
-                    <img class="floppy" src="static/images/elements/edited_floppy.png">
-                </a>
-                <a href="/" class="floppy_link">
-                    <img class="floppy" src="static/images/elements/edited_floppy.png">
-                </a>
-                <a href="/" class="floppy_link">
-                    <img class="floppy" src="static/images/elements/edited_floppy.png">
-                </a>
-            </div>
-            <div class="pagination" id="pagination">
-                <button class="dot active" aria-label="Go to slide 1"></button>
-                <button class="dot" aria-label="Go to slide 2"></button>
-                <button class="dot" aria-label="Go to slide 3"></button>
-            </div>
-        </div>
-        <div class="desktop_project_container" id="projects">
-            <div class="project_folder">
-                <img
-                    src="static/images/elements/pixel_folder.png"
-                    alt=""
-                    class="folder_image"
-                />
-                <div class="folder_text">
-                    A Sample
-                    <div class="folder_hr">
+                <div class="project_slides">
+                    <div class="project_file left_item">
+                        
                     </div>
-                    of my
-                    <div class="folder_hr">
+                    <div class="project_file right_item">
+                        
                     </div>
-                    Projects
+                    <div class="project_file">
+                        
+                    </div>
+                    <div class="project_file">
+                        
+                    </div>
+                    
+                    <div class="folder_button_next">&gt;</div>
+                    <div class="folder_button_prev folder_button_prev_off">&lt;</div>
                 </div>
             </div>
-            <div class="project_slides">
-                <div class="project_file left_item">
-                    
-                </div>
-                <div class="project_file right_item">
-                    
-                </div>
-                <div class="project_file">
-                    
-                </div>
-                <div class="project_file">
-                    
-                </div>
-                
-                <div class="folder_button_next">&gt;</div>
-                <div class="folder_button_prev folder_button_prev_off">&lt;</div>
-            </div>
-        </div>
-        <div class="mobile_readme">
-            <img class="small_readme" src="static/images/elements/small_readme.png">
-            <div class="small_readme_text">
-                <div class="small_readme_section small_readme_start">
-                    Education
-                </div>
-                <pre>
+            <div class="mobile_readme">
+                <img class="small_readme" src="static/images/elements/small_readme.png">
+                <div class="small_readme_text">
+                    <div class="small_readme_section small_readme_start">
+                        Education
+                    </div>
+                    <pre>
 University of Tennessee, Knoxville
 Bachelor's in Computer Science
 Minors: Machine Learning and
         Business Administration
-                </pre>
-                <hr class="small_readme_hr">
-                <div class="small_readme_section">
-                    Experience
-                </div>
-                <pre>
+                    </pre>
+                    <hr class="small_readme_hr">
+                    <div class="small_readme_section">
+                        Experience
+                    </div>
+                    <pre>
 Technical Data Clerk
 Pellissippi State - Knoxville, TN
 August 2025 - Present
@@ -203,25 +202,25 @@ June 2023 - August 2023
 Software Engineering Intern
 Collins Aerospace - Huntsville, AL
 June 2022 - January 2023
-                </pre>
-            </div>
-        </div>
-        <div class="desktop_readme">
-            <img class="big_readme" src="static/images/elements/readme_no_bar.png">
-            <div class="big_readme_text">
-                <div class="big_readme_section big_readme_start">
-                    Education
+                    </pre>
                 </div>
-                <pre>
+            </div>
+            <div class="desktop_readme">
+                <img class="big_readme" src="static/images/elements/readme_no_bar.png">
+                <div class="big_readme_text">
+                    <div class="big_readme_section big_readme_start">
+                        Education
+                    </div>
+                    <pre>
 University of Tennessee, Knoxville       Graduation: May 2024
 Bachelor of Science: Computer Science
 Minors: Machine Learning and Business Administration
-                </pre>
-                <hr class="big_readme_hr">
-                <div class="big_readme_section">
-                    Experience
-                </div>
-                <pre>
+                    </pre>
+                    <hr class="big_readme_hr">
+                    <div class="big_readme_section">
+                        Experience
+                    </div>
+                    <pre>
 Technical Data Clerk                    August 2025 - Present
 Pellissippi State                     Location: KNoxville, TN
 
@@ -264,155 +263,161 @@ SCRUM team, implementing feedback through a formal peer
 review process aligned with DO-178 standards. Supported 
 production qualification testing and contributed to design 
 documentation updates for software inference.
-                </pre>
-            </div>
-        </div>
-        <div class="resume_container">
-            <a class="resume_button" href="static/files/resume_8_29_26.pdf" target="_blank">
-                Get Resume
-            </a>
-        </div>
-        <div class="skills_header">
-            Skills
-        </div>
-        <div class="skill_icons">
-            <div class="icon_row">
-                <div class="icon">
-                    <img src="static/images/skills/pixel_html.png" class="icon_image">
-                    <div class="icon_label">
-                        html
-                    </div>
-                </div>
-                <div class="icon">
-                    <img src="static/images/skills/pixel_css.png" class="icon_image">
-                    <div class="icon_label">
-                        css
-                    </div>
-                </div>
-                <div class="icon">
-                    <img src="static/images/skills/pixel_figma_alt.png" class="icon_image">
-                    <div class="icon_label">
-                        figma
-                    </div>
+                    </pre>
                 </div>
             </div>
-            <div class="icon_row">
-                <div class="icon">
-                    <img src="static/images/skills/pixel_excel_alt.png" class="icon_image">
-                    <div class="icon_label">
-                        excel
+            <div class="resume_container">
+                <a class="resume_button" href="static/files/resume_8_29_26.pdf" target="_blank">
+                    Get Resume
+                </a>
+            </div>
+            <div class="skills_header">
+                Skills
+            </div>
+            <div class="skill_icons">
+                <div class="icon_row">
+                    <div class="icon">
+                        <img src="static/images/skills/pixel_html.png" class="icon_image">
+                        <div class="icon_label">
+                            html
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <img src="static/images/skills/pixel_css.png" class="icon_image">
+                        <div class="icon_label">
+                            css
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <img src="static/images/skills/pixel_figma_alt.png" class="icon_image">
+                        <div class="icon_label">
+                            figma
+                        </div>
                     </div>
                 </div>
-                <div class="icon">
-                    <img src="static/images/skills/pixel_python.png" class="icon_image">
-                    <div class="icon_label">
-                        python
+                <div class="icon_row">
+                    <div class="icon">
+                        <img src="static/images/skills/pixel_excel_alt.png" class="icon_image">
+                        <div class="icon_label">
+                            excel
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <img src="static/images/skills/pixel_python.png" class="icon_image">
+                        <div class="icon_label">
+                            python
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <img src="static/images/skills/pixel_sql.png" class="icon_image">
+                        <div class="icon_label">
+                            sql
+                        </div>
                     </div>
                 </div>
-                <div class="icon">
-                    <img src="static/images/skills/pixel_sql.png" class="icon_image">
-                    <div class="icon_label">
-                        sql
+                <div class="icon_row">
+                    <div class="icon">
+                        <img src="static/images/skills/pixel_cpp.png" class="icon_image">
+                        <div class="icon_label">
+                            c++
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <img src="static/images/skills/pixel_js.png" class="icon_image">
+                        <div class="icon_label">
+                            javascript
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <img src="static/images/skills/pixel_git (1).png" class="icon_image">
+                        <div class="icon_label">
+                            git
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="icon_row">
-                <div class="icon">
-                    <img src="static/images/skills/pixel_cpp.png" class="icon_image">
-                    <div class="icon_label">
-                        c++
-                    </div>
-                </div>
-                <div class="icon">
-                    <img src="static/images/skills/pixel_js.png" class="icon_image">
-                    <div class="icon_label">
-                        javascript
-                    </div>
-                </div>
-                <div class="icon">
-                    <img src="static/images/skills/pixel_git (1).png" class="icon_image">
-                    <div class="icon_label">
-                        git
-                    </div>
-                </div>
+            <div class="lets_connect" id="contact">
+                Let's Connect!
             </div>
-        </div>
-        <div class="lets_connect" id="contact">
-            Let's Connect!
-        </div>
-        <div class="contact_section">
-            <div class="contact_link" id="email_form_btn">
-                Email
+            <div class="contact_section">
+                <div class="contact_link" id="email-form-btn">
+                    Email
+                </div>
+                <a class="contact_link" 
+                href="https://github.com/c-program32" 
+                target="_blank">
+                    GitHub
+                </a>
+                <a class="contact_link" 
+                href="https://www.linkedin.com/in/christiangraham8/" 
+                target="_blank">
+                    LinkedIn
+                </a>
             </div>
-            <a class="contact_link" 
-               href="https://github.com/c-program32" 
-               target="_blank" 
-               rel="noopener noreferrer">
-                GitHub
-            </a>
-            <a class="contact_link" 
-               href="https://www.linkedin.com/in/christiangraham8/" 
-               target="_blank" 
-               rel="noopener noreferrer">
-                LinkedIn
-            </a>
-        </div>
-        <div class="terminal_background" id="terminal_background_id">
-            <div class="terminal_window">
-                <div class="terminal_body">
-                    Electronic Mail Messenger
-                    <form class="email_form" action="https://api.web3forms.com/submit" method="POST" id="form">
-                        <input type="hidden" name="access_key" value="3d8193b6-9d86-4d3d-b96e-3008e97da869">
-                        <div class="copy_string">
-                            <div id="email_copy">
-                                To: christiangraham8@gmail.com
+            <div id="terminal-background">
+                <div class="terminal_window">
+                    <div class="terminal_body">
+                        Electronic Mail Messenger
+                        <form class="email_form" action="https://api.web3forms.com/submit" method="POST" id="form">
+                            <input type="hidden" name="access_key" value="3d8193b6-9d86-4d3d-b96e-3008e97da869">
+                            <div class="copy_string">
+                                <div id="email-copy">
+                                    To: christiangraham8@gmail.com
+                                </div>
+                                <div id="copied-msg">
+                                    Copied!
+                                </div>
                             </div>
-                            <div id="copied_msg">
-                                Copied!
+                            <div class="form_email_input">
+                                <label for="form-email-field">
+                                    From:
+                                </label>
+                                <input type="email" 
+                                    id="form-email-field"
+                                    name="email"
+                                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+                                    required 
+                                />
                             </div>
-                        </div>
-                        <div class="form_email_input">
-                            <label for="form_email_field">
-                                From:
-                            </label>
-                            <input type="email" 
-                                id="form_email_field"
-                                name="email"
-                                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
-                                required 
-                            />
-                        </div>
-                        <div class="form_subject_input">
-                            <label for="form_subject_field">
-                                Subject: 
-                            </label>
-                            <input type="text" 
-                                name="subject"
-                                id="form_subject_field"
-                                minlength="4" 
-                                maxlength="50"
-                            />
-                        </div>
-                        <textarea name="message" 
-                            class="form_message_field" 
-                            rows="4" 
-                            placeholder="Type your message..."></textarea>
-                        <div class="form_buttons">
-                            <button id="form_close_btn">
-                                Close
-                            </button>
-                            <button id="form_submit_btn" type="submit">
-                                Submit
-                            </button>
-                        </div>
-                        <div id="result">hi mom</div>
-                    </form>
+                            <div class="form_subject_input">
+                                <label for="form-subject-field">
+                                    Subject: 
+                                </label>
+                                <input type="text" 
+                                    name="subject"
+                                    id="form-subject-field"
+                                    minlength="4" 
+                                    maxlength="50"
+                                />
+                            </div>
+                            <textarea name="message" 
+                                class="form_message_field" 
+                                rows="4" 
+                                placeholder="Type your message..."></textarea>
+                            <div class="form_buttons">
+                                <button id="form-close-btn">
+                                    Close
+                                </button>
+                                <button id="form-submit-btn" type="submit">
+                                    Submit
+                                </button>
+                            </div>
+                            <div id="result"></div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <footer>
-            © 2026 Christian Graham. All rights reserved.
-        </footer>
-    </main>
-</body>
+            <footer>
+                <p class="all_rights">
+                    © 2026 Christian Graham. All rights reserved.
+                    <br>
+                </p>
+                <p>
+                    3D Model: "<a class="credit_link" href="https://sketchfab.com/3d-models/vintage-computer-563fe5d2fb2a48feb1b2cc7c28ebb2c1 " target="_blank" >Vintage Computer</a>" by <a class="credit_link" href="https://sketchfab.com/explainedlake98" target="_blank">ExplainedLake</a> 
+                    <br><br>
+                    (<a class="credit_link" href="https://creativecommons.org">CC BY 4.0</a>), modified.
+                </p>
+            </footer>
+        </main>
+    </body>
 </html>

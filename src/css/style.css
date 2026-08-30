@@ -8,11 +8,11 @@ html {
 }
 
 /* NAVBAR */
-.desktop-nav {
+.desktop_nav {
     display: none;
 }
 
-.mobile-nav {
+.mobile_nav {
     display: inline;
     top: 1rem;
     left: 1rem;
@@ -21,13 +21,13 @@ html {
     z-index: 5000;
 }
 
-.navbar-mobile-items {
+.navbar_mobile_items {
     display: flex;
     margin-right: 2rem;
     align-items: center;
 }
 
-.nav-box {
+.nav_box {
     display: flex;
     height: 3rem;
     width: 20vw;
@@ -41,12 +41,12 @@ html {
     user-select: none;
 }
 
-.nav-box:active {
+.nav_box:active {
     transform: scale(0.9);
     transition: transform 0.05s ease;
 }
 
-.nav-mobile-right-items {
+.nav_mobile_right_items {
     display: none;
     margin: 0;
     padding: 0;
@@ -61,20 +61,20 @@ html {
     list-style-type: none;
 }
 
-.nav-mobile-right-items-off {
+.nav_mobile_right_items_off {
     display: flex;
 }
 
-.nav-button {
+.nav_button {
     color: black;
     text-decoration: none;
 }
 
-.nav-button:visited {
+.nav_button:visited {
     color: inherit;
 }
 
-.nav-button:active {
+.nav_button:active {
     color: red;
 }
 
@@ -108,11 +108,11 @@ html {
         display: none;
     }
 
-    .mobile-nav {
+    .mobile_nav {
         display: none;
     }
 
-    .desktop-nav {
+    .desktop_nav {
         display: inline;
         background-color: white;
         position: fixed;
@@ -128,7 +128,7 @@ html {
         transform: translate(-50%, -3%);
     }
 
-    .navbar-items {
+    .navbar_items {
         max-width: 1400px;
         width: 100%;
         margin-inline: auto;
@@ -165,7 +165,7 @@ html {
         width: auto;
     }
 
-    .nav-button:hover {
+    .nav_button:hover {
         color: red;
     }
 }
@@ -831,7 +831,7 @@ html {
 }
 
 /* EMAIL FORM */
-.terminal_background {
+#terminal-background {
     display: none;
     width: 100%;
     height: 105%;
@@ -844,7 +844,7 @@ html {
 }
 
 .terminal_background_on {
-    display: inline;
+    display: inline !important;
 }
 
 .terminal_window {
@@ -876,7 +876,7 @@ html {
     margin-top: 7%;
 }
 
-#copied_msg {
+#copied-msg {
     display: none;
 }
 
@@ -901,7 +901,7 @@ html {
     gap: 2%;
 }
 
-#form_email_field {
+#form-email-field {
     background-color: black;
     color:rgb(0, 180, 0);
     font-family: monospace;
@@ -911,7 +911,7 @@ html {
     caret-shape: block;
 }
 
-#form_subject_field {
+#form-subject-field {
     background-color: black;
     color:rgb(0, 180, 0);
     font-family: monospace;
@@ -958,18 +958,18 @@ html {
     align-items: center;
 }
 
-#form_submit_btn {
+#form-submit-btn {
     color: black;
     background-color: rgb(0, 180, 0);
 }
 
-#form_close_btn {
+#form-close-btn {
     color: rgb(0, 180, 0);
     background-color: black;
 }
 
-#form_close_btn,
-#form_submit_btn {
+#form-close-btn,
+#form-submit-btn {
     border: rgb(0, 180, 0) solid 2px;
     height: 2rem;
     width: 5rem;
@@ -980,8 +980,8 @@ html {
     font-size: 1.3rem;
 }
 
-#form_close_btn:active,
-#form_submit_btn:active {
+#form-close-btn:active,
+#form-submit-btn:active {
     transform: scale(0.9);
     transition: transform 0.05s ease;
 }
@@ -1035,17 +1035,17 @@ html {
         gap: 15%;
     }
 
-    #email_copy {
+    #email-copy {
         color: rgb(0, 180, 0);
         cursor: pointer;
         width: auto;
     }
 
-    #copied_msg {
+    #copied-msg {
         color: rgb(0, 255, 0);
     }
 
-    #email_copy:hover {
+    #email-copy:hover {
         color: rgb(0, 255, 0);
     }
 
@@ -1058,12 +1058,12 @@ html {
         padding-top: 2%;
     }
 
-    #form_email_field {
+    #form-email-field {
         font-size: 1.5vw;
         width: 100%;
     }
 
-    #form_subject_field {
+    #form-subject-field {
         font-size: 1.5vw;
         width: 100%;
     }
@@ -1087,28 +1087,28 @@ html {
         padding-right: 4.5%;
     }
 
-    #form_close_btn {
+    #form-close-btn {
         background-color: black;
     }
 
-    #form_close_btn,
-    #form_submit_btn {
+    #form-close-btn,
+    #form-submit-btn {
         height: 2.5vw;
         width: 5.2vw;
         cursor: pointer;
         font-size: 1.5vw;
     }
 
-    #form_close_btn:hover,
-    #form_submit_btn:hover {
+    #form-close-btn:hover,
+    #form-submit-btn:hover {
         border: rgb(0, 255, 0) solid 2px;
     }
 
-    #form_close_btn:hover {
+    #form-close-btn:hover {
         color: rgb(0, 255, 0);
     }
 
-    #form_submit_btn:hover {
+    #form-submit-btn:hover {
         background-color: rgb(0, 255, 0);
     }
 
@@ -1119,12 +1119,25 @@ html {
 
 /* FOOTER */
 footer {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     font-family: monospace;
-    font-size: 0.8rem;
-    color: black;
+    font-size: 0.6rem;
+    color: gray;
     width: 100%;
     margin: auto;
     text-align: center;
+}
+
+.credit_link {
+    cursor: pointer;
+    color: #963D97;
+}
+
+.credit_link:hover {
+    color: red;
+}
+
+.all_rights {
+    font-size: 0.8rem;
 }

@@ -1,12 +1,12 @@
 const navButton = document.getElementById("menu-button");
 const rightNavItems = document.getElementById("nav-mobile-right-items");
-const homeArrow = document.getElementById("home_arrow");
+const homeArrow = document.getElementById("home-arrow");
 
-const closeButton = document.getElementById("form_close_btn");
-const terminal = document.getElementById("terminal_background_id");
-const emailButton = document.getElementById("email_form_btn");
-const emailCopy = document.getElementById("email_copy");
-const emailMessage = document.getElementById("copied_msg");
+const closeButton = document.getElementById("form-close-btn");
+const terminal = document.getElementById("terminal-background");
+const emailButton = document.getElementById("email-form-btn");
+const emailCopy = document.getElementById("email-copy");
+const emailMessage = document.getElementById("copied-msg");
 
 const form = document.getElementById("form");
 const result = document.getElementById("result");
@@ -16,7 +16,7 @@ navButton.addEventListener("click", () => {
     const isMenuOpen = navButton.textContent.trim() === "≡ Menu";
 
     navButton.textContent = isMenuOpen ? "X Menu" : "≡ Menu";
-    rightNavItems.classList.toggle("nav-mobile-right-items-off", isMenuOpen);
+    rightNavItems.classList.toggle("nav_mobile_right_items_off", isMenuOpen);
     homeArrow.classList.toggle("home_arrow_container_on", isMenuOpen);
 });
 
