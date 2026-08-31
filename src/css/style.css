@@ -770,7 +770,7 @@ html {
     }
 
     .icon_row{
-        grid-template-columns: repeat(3, 30%);
+        grid-template-columns: repeat(3, 33.33%);
     }
 
     .icon {
