@@ -743,8 +743,7 @@ html {
 .icon_row{
     padding-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(3, 6rem);
-    gap: 1rem;
+    grid-template-columns: repeat(3, 33.33%);
     justify-content: space-evenly;
 }
 
@@ -767,10 +766,6 @@ html {
 @media(min-width: 1024px) {
     .skill_icons {
         width: 39rem;
-    }
-
-    .icon_row{
-        grid-template-columns: repeat(3, 33.33%);
     }
 
     .icon {
@@ -860,7 +855,7 @@ html {
     z-index: 5002;
     color: rgb(0, 180, 0);
     font-family: monospace;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .terminal_body {
@@ -905,7 +900,7 @@ html {
     background-color: black;
     color:rgb(0, 180, 0);
     font-family: monospace;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     width: 97.5%;
     outline: none;
     caret-shape: block;
@@ -915,7 +910,7 @@ html {
     background-color: black;
     color:rgb(0, 180, 0);
     font-family: monospace;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     width: 97.5%;
     outline: none;
     caret-shape: block;
@@ -929,7 +924,7 @@ html {
 .form_message_field {
     background-color: black;
     color:rgb(0, 180, 0);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     width: 92%;
     margin: auto;
     flex-grow: 1;
@@ -1085,7 +1080,7 @@ html {
         justify-content: flex-end;
         align-items: flex-end;
         right: 0;
-        padding-right: 4.5%;
+        padding-right: 8%;
     }
 
     #form-close-btn {
