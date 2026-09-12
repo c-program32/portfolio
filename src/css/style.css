@@ -925,6 +925,7 @@ html {
     background-color: black;
     color:rgb(0, 180, 0);
     font-size: 1.1rem;
+    font-family: monospace;
     width: 92%;
     margin: auto;
     flex-grow: 1;
@@ -995,6 +996,7 @@ html {
     align-items: center;
     text-align: center;
     color: black;
+    font-size: 1rem;
     outline-offset: -5px;
     outline: 2px solid black;
 }
