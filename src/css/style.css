@@ -193,20 +193,25 @@ html {
 }
 
 @media(min-width: 1024px) {
-    .computer-model {
-        width: 18rem;
-        height: auto;
-        aspect-ratio: 3 / 4;
-        justify-self: end;
-        margin-right: 7rem;
+    #welcome {
+        display: none;
     }
 
     .hero_container {
+        margin-top: 3rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 1rem;
         width: 100%;
+    }
+
+    .computer-model {
+        width: 20rem;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        justify-self: end;
+        margin-right: 3rem;
     }
 
     .welcome_message {
@@ -215,26 +220,27 @@ html {
         width: 40%;
         height: auto;
         justify-self: start;
-        margin-left: -7rem;
+        margin-left: -3rem;
         top: 1rem;
     }
 
     .welcome_image {
-        width: 31rem;
+        width: 27rem;
         height: auto;
     }
 
     .welcome_text {
         position: absolute;
-        font-family: monospace;
-        top: 1.6rem;
-        left: 7.8rem;
-        font-size: 0.97rem;
+        font-family: 'PRESS START 2P';
+        top: 2.75rem;
+        left: 4.9rem;
+        font-size: 1.5rem;
         width: 19.7rem;
+        text-align: center;
     }
 
     .welcome_hr {
-        height: 0.5rem;
+        height: 1.5rem;
     }
 }
 
@@ -301,10 +307,15 @@ html {
 }
 
 @media(min-width: 1024px) {
+    .a_bit {
+        margin-top: 1.5rem;
+    }
+
     .about {
         position: relative;
         font-family: monospace;
         font-size: 1rem;
+        line-height: 1.5rem;
         text-align: center;
         align-items: center;
         margin: auto;
@@ -437,7 +448,7 @@ html {
         grid-template-columns: 1fr 2fr;
         align-items: center;
         width: min(100%, 1200px);
-        margin: 4rem auto 0;
+        margin: 5rem auto 0;
         height: auto;
     }
 
@@ -559,24 +570,20 @@ html {
 }
 
 .small_readme {
-    display: block;
     width: 22rem;
 }
 
 .small_readme_text {
     position: absolute;
-
     top: 1.8rem;
     height: 24.7rem;
 
-    overflow-y: auto;
-
     font-family: monospace;
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.1;
 
     scrollbar-width: none;
-
+    overflow-y: auto;
     -ms-overflow-style: none;
 }
 
@@ -608,7 +615,7 @@ html {
 
 .resume_button {
     font-family: monospace;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     background-color: white;
     width: 6.75rem;
     height: 2.6rem;
